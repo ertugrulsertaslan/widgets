@@ -22,4 +22,6 @@ body {
 .widget {
     background: #fff;
     border-radius: 1.3rem;
+    overflow: hidden;
+    position: relative;
 }

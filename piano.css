@@ -1,0 +1,59 @@
+.piano {
+    background-color: #1e1f23;
+    height: 100%;
+}
+
+.piano * {
+    box-sizing: border-box;
+}
+
+.piano-top {
+    height: 40%;
+}
+
+.black-key-row {
+    display: flex;
+    position: absolute;
+    height: 40%;
+    width: 100%;
+
+}
+.black-key {
+    background-color: #1e1f23;
+    width: 12%;
+    height: 100%; 
+    margin-left: 11%;
+    border-bottom: 6px solid #4b4b4b;
+    border-radius: 0px 0px 4px 4px;
+}
+
+.black-key:hover {
+    border: 0;
+}
+.white-key-row {
+    background-color: #1e1f23;
+    height: 60%;
+    display: flex;
+    flex-wrap: nowrap;
+   
+}
+.white-key:hover {
+    border: 0;
+}
+.white-key:nth-child(1) {
+    border-radius: 0 0 0 1.3rem;
+}
+
+.white-key:last-child {
+    border-radius: 0 0 1.3rem 0;
+}
+
+.white-key {
+    background-color: white;
+    width: 20%;
+    height: 100%;
+    border-bottom: 6px solid #afafaf;
+}
+.white-key:not(:last-child) {
+    border-right: 3px solid #1e1f23;
+}
