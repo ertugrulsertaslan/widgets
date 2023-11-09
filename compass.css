@@ -1,0 +1,87 @@
+body {
+    height: 100%;
+    margin: 0;
+    padding: 0;
+    
+}
+.compass {
+    background-color: #000000;
+    height: 100%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    box-sizing: border-box;
+    position: relative;
+}
+.compass-circle {
+    width: 100%;
+    height: 100%;
+    position: absolute;
+    
+}
+.circle {
+	stroke-width: 16;
+	stroke: #fff;
+    width: 100%;
+    height: 100%;
+    
+}
+svg {
+    width: 100%;
+    height: 100%;
+    position: absolute;
+}
+.compass-direction {
+    position: absolute;
+    width: 100%;
+    height: 100%;
+    align-items: center;
+    display: flex;
+}
+.direction {
+    position: absolute;
+    top :50%;
+    left:50%;
+    transform: translate(-50%, -50%);
+    display: flex;
+    width: 55%;
+    height: 55%;
+    align-items: center;
+    justify-content: space-between;
+    flex-direction: column;
+    color: rgb(255, 255, 255);
+
+}
+.direction:nth-child(2) {
+    width: 53%;
+    height: 53%;
+    flex-direction: row;
+}
+.direction-stick-x {
+    position: absolute;
+    width: 1px;
+    height: 58px;
+    background-color: rgb(255, 255, 255);
+    top:calc(35% - 1px);
+    left :calc(50% - 2px);
+    border-radius: 3mm; 
+}
+.direction-stick-y {
+    position: absolute;
+    width: 58px;
+    height: 1px;
+    background-color: rgb(255, 255, 255);
+    top:calc(50% - 2px);
+    left :calc(36% - 1px);
+    border-radius: 3mm;
+}
+.compass-stick {
+    position: absolute;
+    width: 2px;
+    height: 30px;
+    background-color: rgb(255, 0, 0);
+    top: calc(36% - 1px);
+    left: calc(54% - 1px );
+    border-radius: 3mm;
+    transform: rotate(40deg) 
+}
