@@ -12,7 +12,6 @@ body {
     align-items: center;
     justify-content: center;
     background-color: black;
-    padding: 10px; 
 }
 .eye {
     border-radius: 50%;
@@ -32,5 +31,5 @@ body {
     top: 50%;
     left: 50%;
     transform: translate(-50%,-50%);
-  border: 10px solid  rgb(81, 200, 255);
+    border: 10px solid  rgb(81, 200, 255);
 }

@@ -1,0 +1,44 @@
+.spin {
+    height: 100%;
+    position: relative;
+    background-color: black;
+}
+.spin * {
+    box-sizing: border-box;
+}
+.spin-center {
+    width: 100%;
+    height: 40%;
+    position: absolute;
+    top: 30%;
+}
+#spin-message { 
+    height: 10%;
+    width: 60%;
+    position: absolute;
+    top: 12%;
+    left: 28%;
+    color:white;
+    font-size: 1.2rem;
+}
+.spin-content {
+    font-size:2.7rem;   
+    /* transform: translateY(0); */
+    transition: transform 1s ease-in-out;
+     
+}
+.spin-button {
+    width: 50%;
+    height: 15%;
+    position: absolute;
+    top: 75%;
+    left: 25%;
+    border-radius: 10px;
+    background-color: rgb(219, 44, 44);
+    color: rgb(216, 216, 216);
+    font-family: "Audiowide", sans-serif;
+    text-shadow: 3px 3px 3px #000000;
+    font-size: 1rem;
+    padding: 0;
+    border: 0;
+}

@@ -2,6 +2,7 @@
 <html lang="en">
 <head>
     <meta charset="UTF-8">
+    <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Audiowide">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Widgets</title>
     <link rel="stylesheet" href="/style.css">
@@ -9,6 +10,7 @@
     <link rel="stylesheet" href="/clock.css">
     <link rel="stylesheet" href="/compass.css">
     <link rel="stylesheet" href="/eyes.css">
+    <link rel="stylesheet" href="/spin.css">
 </head>
 <body>
     <div class="container">
@@ -79,7 +81,17 @@
                 </div>
             </div>
         </div>
-        <div class="widget"></div>
+        <div class="widget">
+            <div class="spin">
+                <div id="spin-message"></div>
+                <div class="spin-center">
+                    <span class="spin-content"></span>
+                    <span class="spin-content"></span>
+                    <span class="spin-content"></span>
+                </div>
+                <button  class="spin-button">Spin</button>
+            </div>
+        </div>
         <div class="widget"></div>
         <div class="widget"></div>
         <div class="widget"></div>
@@ -88,5 +100,6 @@
     <script type="text/javascript" src="piano.js"></script>
     <script type="text/javascript" src="clock.js"></script>
     <script type="text/javascript" src="eyes.js"></script>
+    <script type="text/javascript" src="spin.js"></script>
 </body>
 </html>
