@@ -16,11 +16,12 @@ body {
 .eye {
     border-radius: 50%;
     background-color: rgb(255, 255, 255);
-    width: 50%;
-    height: 50%;
+    width: 45%;
+    height: 45%;
     position: relative;
     overflow: hidden;
     box-sizing: border-box;
+    margin: 5px;
 }
 .pupil {
     border-radius: 50%;
