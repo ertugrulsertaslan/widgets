@@ -1,0 +1,52 @@
+.chronometer {
+    height: 100%;
+    width: 100%;
+    margin: 0;
+    padding: 0;
+    background-color: black;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    flex-direction: column;
+    position: absolute;
+}
+.chronometer-content {
+    width: 50px;
+    height: 30px;
+    color: rgb(115, 255, 0);
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    font-size: 2rem;
+    
+}
+.chronometer-btn {
+    width: 70px;
+    height: 40px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    background-color: black; 
+    border: 0;
+    margin-right: 40px; 
+}
+.chronometer-controls {
+    display: flex;
+    width: 55px;
+    margin-top: 30px;
+    align-items: center;
+    justify-content: center;
+}
+.controls-svg {
+    height: 40px;
+    width: 40px;
+    margin-left: 45px;
+    color: rgb(115, 255, 0);
+    padding: 20px;
+}
+.invisible {
+    display: none;
+}
+.left {
+    
+}
