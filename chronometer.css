@@ -1,3 +1,7 @@
+@font-face {
+    font-family: 'DS-DIGI';
+    src : url('./font/DS-DIGI.TTF')  format('truetype'),
+}
 .chronometer {
     height: 100%;
     width: 100%;
@@ -18,7 +22,7 @@
     align-items: center;
     justify-content: center;
     font-size: 2rem;
-    
+    font-family: 'DS-DIGI';
 }
 .chronometer-btn {
     width: 70px;
@@ -46,7 +50,4 @@
 }
 .invisible {
     display: none;
-}
-.left {
-    
 }
