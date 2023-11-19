@@ -37,3 +37,5 @@ spinBtn.addEventListener("click",()=>{
     }, 3000);  
  });
 
+// li boyutu * random sayı translate animasyonu
+//animasyon aynı anda başlayacak sıralı şekilde sonlanıcak (animasyon süreleri farklı olacak)
