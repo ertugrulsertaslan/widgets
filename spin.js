@@ -5,37 +5,19 @@ let spinBtn = document.querySelector("button");
 
 
 spinBtn.addEventListener("click",()=>{
-   
     spinBtn.disabled = true;
-    message.innerHTML="Spinning...";
-    console.log (message.innerHTML);
-     for(let i=0;i<spinContent.length;i++){
-        spinContent[i].innerHTML="";
-     }
-   
-   setTimeout(() => {   
-        spinContent[0].innerHTML =   fruits[Math.floor(Math.random() * fruits.length)];  
-     
-    }, 1000);
-   setTimeout(() => { 
-        spinContent[1].innerHTML =   fruits[Math.floor(Math.random() * fruits.length)];
-    }, 2000);
-    setTimeout(() => {
-        spinContent[2].innerHTML =   fruits[Math.floor(Math.random() * fruits.length)];
-    }, 3000);
-    setTimeout(() => {  
-        if (spinContent[0].innerHTML == spinContent[1].innerHTML ) {
-            if (spinContent[0].innerHTML == spinContent[2].innerHTML){
-            if (spinContent[1].innerHTML == spinContent[2].innerHTML){  
-                message.innerHTML = "Jackpot" ;
-                }    
-            } 
-        }else{
-            message.innerHTML = "Try Again";
-            }
-        spinBtn.disabled = false;
-    }, 3000);  
- });
+    for(let i=0 ;i<3;i++){
+        let spinList = document.createElement('ul');
+        spinList.classList.add('spin-list');
+        spinContent[i].append(spinList);
+        
+        for(let i=0;i<40;i++){
+            let spinListItem = document.createElement('li');
+            spinListItem.classList.add('spin-list-item');
+            spinList.append(spinListItem);
+            spinListItem.innerText =  fruits[Math.floor(Math.random() * fruits.length)];
+        }
 
-// li boyutu * random sayı translate animasyonu
-//animasyon aynı anda başlayacak sıralı şekilde sonlanıcak (animasyon süreleri farklı olacak)
+        
+    }
+ });
