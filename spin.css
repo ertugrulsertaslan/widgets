@@ -1,3 +1,7 @@
+@font-face {
+    font-family: 'Jackpot';
+    src : url('./font/jackpot.ttf')  format('truetype'),
+}
 .spin {
     height: 100%;
     position: relative;
@@ -15,13 +19,15 @@
     display:flex;
 }
 #spin-message { 
-    height: 10%;
-    width: 60%;
+    height: 15%;
+    width: 70%;
     position: absolute;
-    top: 12%;
-    left: 28%;
-    color:white;
-    font-size: 1.2rem;
+    top: 3%;
+    left: 16%;
+    color:rgb(219, 44, 44);
+    font-size: 0.8rem;
+    text-align: center;
+    font-family: 'Jackpot';
 }
 .spin-content {
     font-size:2.7rem;   
@@ -31,11 +37,11 @@
     overflow: hidden;
 }
 .spin-button {
-    width: 50%;
-    height: 15%;
+    width: 60%;
+    height: 16%;
     position: absolute;
-    top: 75%;
-    left: 25%;
+    top: 78%;
+    left: 22%;
     border-radius: 10px;
     background-color: rgb(219, 44, 44);
     color: rgb(216, 216, 216);
@@ -50,9 +56,8 @@
         transform: translateY(-100%);
     }
     to {
-        transform: translateY(-35px);
+        transform: translateY(-45px);
     } 
-    
 }
 .spin-list {
     position: absolute;
