@@ -13,6 +13,7 @@
     <link rel="stylesheet" href="eyes.css">
     <link rel="stylesheet" href="spin.css">
     <link rel="stylesheet" href="chronometer.css">
+    <link rel="stylesheet" href="counter.css">
 </head>
 <body>
     <div class="container">
@@ -131,7 +132,15 @@
             </div>
         </div>
         <div class="widget-box">
-            <div class="widget"></div>
+            <div class="widget">
+                <div class="counter">
+                    <div class="counter-number">
+                        <div><button id="minus">-</button></div>
+                        <div id="numbers">0</div>
+                        <div><button id="plus">+</button></div>
+                    </div>
+                </div>
+            </div>
         </div>
         <div class="widget-box">
             <div class="widget"></div>
@@ -145,5 +154,6 @@
     <script type="text/javascript" src="eyes.js"></script>
     <script type="text/javascript" src="spin.js"></script>
     <script type="text/javascript" src="chronometer.js"></script>
+    <script type="text/javascript" src="counter.js"></script>
 </body>
 </html>
