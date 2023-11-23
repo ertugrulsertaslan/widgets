@@ -1,3 +1,7 @@
+@font-face {
+    font-family: 'digital_counter_7';
+    src : url('./font/digital_counter_7.ttf')  format('truetype'),
+}
 .counter {
     width: 100%;
     background-color: rgb(0, 0, 0);
@@ -9,26 +13,37 @@
     display: flex;
     justify-content: center;
     align-items: center;
+    flex-wrap: wrap;
+}
+.counter-button {
+    width: 100%;
+    height: 20%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    margin-bottom: 20px;
 }
 #plus {
+    margin-left: 50px;
     width: 30%;
     border: 0;
     background-color: rgb(0, 0, 0);
-    color:white;
-    font-size: 2rem;
-    
+    color: rgb(115, 255, 0);
+    font-size: 2.5rem;
+    font-family: "digital_counter_7";
 }
 #minus {
     width: 30%;
     border: 0;
     background-color: rgb(0, 0, 0);
-    color:white;
-    font-size: 2rem;
-   
+    color: rgb(115, 255, 0);
+    font-size: 2.5rem;
+    font-family: "digital_counter_7";
 }
 #numbers {
     text-align: center;
     color: rgb(115, 255, 0);
     font-size: 3rem;
     width: 40%;
+    font-family: "digital_counter_7";
 }
