@@ -1,0 +1,103 @@
+* {
+    margin: 0;
+    padding: 0;
+}
+.music-player {
+    margin: 0;
+    padding: 0;
+    width: 100%;
+    height: 100%;
+    background-color: black;
+    align-items: center;
+    justify-content: center;
+    text-align: center;
+}
+.song-photo img {
+    width: 45%;
+    height: 45%;
+    border-radius: 50%;
+    background-color: aliceblue;
+    margin-top: 10px;
+}
+.song-name {
+    width: 100%;
+    height: 15%;
+    color: white;
+    margin-top: 5px;
+    box-sizing: border-box;
+    font-size: 12px;
+}
+.song-player {
+    width: 100%;
+    height: 10%;
+}
+.song-player audio{
+    width: 100%;
+    height: 80%;
+}
+.song-control {
+    width: 100%;
+    height: 20%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    cursor: pointer;
+    
+}
+#progress {
+    -webkit-appearance: none;
+    width: 80%;
+    height: 10%;
+    background-color: azure;
+    border-radius: 50%;
+    cursor: pointer;
+}
+#progress::-webkit-slider-thumb {
+    -webkit-appearance: none;
+    background-color: rgb(255, 153, 0);
+    width: 12px;
+    height: 12px;
+    border-radius: 50%;
+    border: 2px solid #ffffff;
+    box-shadow: 0 0px 5px rgb(255, 153, 0);
+}
+.song-control button {
+    width: 35%;
+    height: 65%;
+    align-items: center;
+    text-align: center;
+    background-color: black;
+    border: 0;
+}
+#back-btn svg {
+    width: 50%;
+    height: 100%;
+    position: relative;
+    background-color: #ffffff;
+    border-radius: 50%;
+}
+#stop-play-btn svg {
+    width: 50%;
+    height: 100%;
+    position: relative;
+    background-color: #ffffff;
+    border-radius: 50%;
+    transform: scale(1.5);
+    margin-bottom: 5px;
+}
+#forward-btn svg {
+    width: 50%;
+    height: 100%;
+    position: relative;
+    background-color: #ffffff;
+    border-radius: 50%;
+}
+
+#stop-play-btn  {
+    width: 20%;
+    height: 60%;
+    position: relative;
+    border-radius: 50%;
+    transform: scale(1.5);
+    margin-bottom: 3px;
+}
