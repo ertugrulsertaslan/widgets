@@ -152,15 +152,15 @@
             <div class="widget">
                 <div class="music-player">
                     <div class="song-photo">
-                        <img src="photo/Imagine-Dragons-album-photo.jpg" alt="">
+                        <img  id="song-photo-content" src="" alt="">
                     </div>
-                    <div class="song-name">
-                        <h4>Birds</h4>
-                        <h5>Imagine Dragons</h5>
+                    <div class="song-content">
+                        <h4 id="song-name"></h4>
+                        <h5 id="song-artist"></h5>
                     </div>
                     <div class="song-player">
                         <audio  id="song">
-                            <source src="sounds/Imagine Dragons - Birds.m4a" type="audio/mpeg">
+                            <source src="" type="audio/mpeg">
                         </audio>
                         <input type="range" value="0" id="progress">
                     </div>
@@ -171,7 +171,7 @@
                               </svg>   
                         </button>
                         <button id="stop-play-btn">
-                              ▶️
+                              <img id="img-btn" src="photo/play.png">
                         </button>
                         <button id="forward-btn">
                             <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" >
