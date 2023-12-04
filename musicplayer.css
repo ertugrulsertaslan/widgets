@@ -1,3 +1,8 @@
+@font-face {
+    font-family: 'GothamLight';
+    src : url('./font/Gotham-XLight.otf')  format('truetype'),
+}
+
 * {
     margin: 0;
     padding: 0;
@@ -19,17 +24,18 @@
     background-color: aliceblue;
     margin-top: 10px;
 }
-.song-name {
+.song-content {
     width: 100%;
-    height: 15%;
+    height: 12%;
     color: white;
     margin-top: 5px;
     box-sizing: border-box;
     font-size: 12px;
+    font-family: "GothamLight";
 }
 .song-player {
     width: 100%;
-    height: 10%;
+    height: 13%;
 }
 .song-player audio{
     width: 100%;
@@ -42,12 +48,11 @@
     align-items: center;
     justify-content: center;
     cursor: pointer;
-    
 }
 #progress {
     -webkit-appearance: none;
     width: 80%;
-    height: 10%;
+    height: 5%;
     background-color: azure;
     border-radius: 50%;
     cursor: pointer;
@@ -55,8 +60,8 @@
 #progress::-webkit-slider-thumb {
     -webkit-appearance: none;
     background-color: rgb(255, 153, 0);
-    width: 12px;
-    height: 12px;
+    width: 10px;
+    height: 10px;
     border-radius: 50%;
     border: 2px solid #ffffff;
     box-shadow: 0 0px 5px rgb(255, 153, 0);
@@ -76,15 +81,7 @@
     background-color: #ffffff;
     border-radius: 50%;
 }
-#stop-play-btn svg {
-    width: 50%;
-    height: 100%;
-    position: relative;
-    background-color: #ffffff;
-    border-radius: 50%;
-    transform: scale(1.5);
-    margin-bottom: 5px;
-}
+
 #forward-btn svg {
     width: 50%;
     height: 100%;
@@ -92,12 +89,12 @@
     background-color: #ffffff;
     border-radius: 50%;
 }
-
 #stop-play-btn  {
-    width: 20%;
+    width: 15%;
     height: 60%;
     position: relative;
     border-radius: 50%;
     transform: scale(1.5);
     margin-bottom: 3px;
+    background-color: #ffffff;
 }
