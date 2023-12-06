@@ -1,41 +1,50 @@
 @font-face {
     font-family: 'GothamLight';
-    src : url('./font/Gotham-XLight.otf')  format('truetype'),
+    src : url('./font/Gotham-Black.otf')  format('truetype'),
 }
 
 * {
     margin: 0;
-    padding: 0;
+    padding: 0; 
 }
-.music-player {
+#music-player {
     margin: 0;
     padding: 0;
     width: 100%;
     height: 100%;
-    background-color: black;
-    align-items: center;
-    justify-content: center;
-    text-align: center;
-}
-.song-photo img {
-    width: 45%;
-    height: 45%;
-    border-radius: 50%;
-    background-color: aliceblue;
-    margin-top: 10px;
+    position: relative;
+    background: url(photo/Imagine-Dragons-album-photo.jpg) ; 
+    -webkit-background-size: cover;
+    -moz-background-size: cover;
+    -o-background-size: cover;
+    background-size: cover;
+    filter: blur(1px);
 }
 .song-content {
     width: 100%;
-    height: 12%;
-    color: white;
-    margin-top: 5px;
-    box-sizing: border-box;
-    font-size: 12px;
+    height: 20%;  
     font-family: "GothamLight";
+    position: absolute;
+    top: 15%;
+    text-align: center;
+    justify-content: center;
 }
+.song-content h4 {
+   color: 	#4ac776;
+   font-size: medium;
+   font-weight: bold;
+}
+.song-content h5 {
+    color: rgb(255, 255, 255);
+    font-size: x-small;
+ }
 .song-player {
     width: 100%;
-    height: 13%;
+    height:30%;
+    position: absolute;
+    top: 75%;
+    text-align: center;
+    justify-content: center;
 }
 .song-player audio{
     width: 100%;
@@ -44,57 +53,64 @@
 .song-control {
     width: 100%;
     height: 20%;
-    display: flex;
+    position: absolute;
     align-items: center;
     justify-content: center;
     cursor: pointer;
+    top: 45%;
+    display: flex;
 }
 #progress {
     -webkit-appearance: none;
     width: 80%;
     height: 5%;
-    background-color: azure;
+    background-color: rgb(255, 255, 255);
     border-radius: 50%;
     cursor: pointer;
+   
 }
 #progress::-webkit-slider-thumb {
     -webkit-appearance: none;
-    background-color: rgb(255, 153, 0);
-    width: 10px;
-    height: 10px;
+    background-color: rgb(0, 255, 13);
+    width: 5px;
+    height: 5px;
     border-radius: 50%;
-    border: 2px solid #ffffff;
-    box-shadow: 0 0px 5px rgb(255, 153, 0);
+    border: 2px solid rgb(0, 255, 34);;
+    box-shadow: 0 0px 5px rgb(0, 255, 34);
+   
 }
-.song-control button {
-    width: 35%;
+.song-control div {
+    width: 100%;
     height: 65%;
     align-items: center;
     text-align: center;
-    background-color: black;
     border: 0;
+    display: flex;  
 }
-#back-btn svg {
-    width: 50%;
+#back-btn {
+    width: 25%;
     height: 100%;
-    position: relative;
-    background-color: #ffffff;
-    border-radius: 50%;
+   
+}
+#back-btn img  {
+    width: 100%;
+    height: 100%;
+}
+#forward-btn {
+    width: 25%;
+    height: 100%;  
+}
+#forward-btn img  {
+    width: 100%;
+    height: 100%;
+}
+#control-play-pause {
+    width: 40%;
+    height: 100%;  
+}
+#control-play-pause img  {
+    width: 60%;
+    height: 130%;
+    margin-left: 20px;
 }
 
-#forward-btn svg {
-    width: 50%;
-    height: 100%;
-    position: relative;
-    background-color: #ffffff;
-    border-radius: 50%;
-}
-#stop-play-btn  {
-    width: 15%;
-    height: 60%;
-    position: relative;
-    border-radius: 50%;
-    transform: scale(1.5);
-    margin-bottom: 3px;
-    background-color: #ffffff;
-}
