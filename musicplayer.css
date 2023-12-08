@@ -1,5 +1,5 @@
 @font-face {
-    font-family: 'GothamLight';
+    font-family: 'GothamBlack';
     src : url('./font/Gotham-Black.otf')  format('truetype'),
 }
 
@@ -23,14 +23,13 @@
 .song-content {
     width: 100%;
     height: 20%;  
-    font-family: "GothamLight";
+    font-family: "GothamBlack";
     position: absolute;
     top: 15%;
     text-align: center;
     justify-content: center;
 }
 .song-content h4 {
-   color: 	#4ac776;
    font-size: medium;
    font-weight: bold;
 }
@@ -65,9 +64,8 @@
     width: 80%;
     height: 5%;
     background-color: rgb(255, 255, 255);
-    border-radius: 50%;
+    border-radius: 25%;
     cursor: pointer;
-   
 }
 #progress::-webkit-slider-thumb {
     -webkit-appearance: none;
@@ -75,7 +73,7 @@
     width: 5px;
     height: 5px;
     border-radius: 50%;
-    border: 2px solid rgb(0, 255, 34);;
+    border: 3px solid rgb(0, 255, 34);;
     box-shadow: 0 0px 5px rgb(0, 255, 34);
    
 }
@@ -88,17 +86,18 @@
     display: flex;  
 }
 #back-btn {
-    width: 25%;
-    height: 100%;
-   
+    width: 10%;
+    height: 70%;
+    margin: 10px; 
 }
 #back-btn img  {
     width: 100%;
     height: 100%;
 }
 #forward-btn {
-    width: 25%;
-    height: 100%;  
+    width: 10%;
+    height: 70%;
+    margin: 10px; 
 }
 #forward-btn img  {
     width: 100%;
@@ -106,11 +105,20 @@
 }
 #control-play-pause {
     width: 40%;
-    height: 100%;  
+    height: 100%; 
+    position: relative;
 }
-#control-play-pause img  {
+#play-btn {
     width: 60%;
     height: 130%;
     margin-left: 20px;
+    position: absolute;
 }
+#pause-btn {
+    width: 60%;
+    height: 120%;
+    position: absolute;
+    left: 20%;
+}
+
 
