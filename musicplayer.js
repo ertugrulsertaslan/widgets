@@ -59,68 +59,29 @@ pauseBtn.addEventListener("click",()=>{
 });
 
 backIcon.addEventListener("click",()=>{
-    song.pause();
-    progress.value = 0;
-    song.currentTime = progress.value;
+    songPause();
     songCount--; 
     if(songCount < 0){
         songCount = songs.length-1;
     }
     if(songCount > 0){
-        song.setAttribute('src', `${songs[songCount]}`);
-        song.setAttribute('type', 'video/mp4');
-        songPhoto.style.backgroundImage = `url("${songsPhotos[songCount]}")`;
-        songName.innerText = songsNames[songCount];
-        songArtist.innerText = artistNames[songCount];
-        songName.style.color = colorNames[songCount];
-        pauseBtn.style.display = "flex";
-        playBtn.style.display = "none";
-        song.play();
+       songProperties();
     }else{
-        song.setAttribute('src', `${songs[songCount]}`);
-        song.setAttribute('type', 'video/mp4');
-        songPhoto.style.backgroundImage = `url("${songsPhotos[songCount]}")`;
-        songName.innerHTML = songsNames[songCount];
-        songArtist.innerHTML = artistNames[songCount];
-        songName.style.color = colorNames[songCount]; 
-        pauseBtn.style.display = "flex";
-        playBtn.style.display = "none";
-        song.play();
+        songProperties();
     }
 });
 
 forwardIcon.addEventListener("click",()=>{
         
-        song.pause();
-        progress.value = 0;
-        song.currentTime = progress.value;
+        songPause();
         songCount++;
         if(songCount <= songs.length-1){
             if(songCount > 0 ){
-                song.setAttribute('src', `${songs[songCount]}`);
-                song.setAttribute('type', 'video/mp4');
-               
-                songPhoto.style.backgroundImage = `url("${songsPhotos[songCount]}")`;
-                songName.innerHTML = songsNames[songCount];
-                songArtist.innerHTML = artistNames[songCount];
-                songName.style.color = colorNames[songCount];
-                song.play();
-               pauseBtn.style.display = "flex";
-               playBtn.style.display = "none";
+               songProperties();
             }
         }else {
             songCount = 0;
-            song.setAttribute('src', `${songs[songCount]}`);
-            song.setAttribute('type', 'video/mp4');
-          
-            songPhoto.style.backgroundImage = `url("${songsPhotos[songCount]}")`;
-            songName.innerHTML = songsNames[songCount];
-            songArtist.innerHTML = artistNames[songCount];
-            songName.style.color = colorNames[songCount];
-            song.play();
-           
-            pauseBtn.style.display = "flex";
-            playBtn.style.display = "none";
+            songProperties();
         }
         
 });
@@ -131,3 +92,23 @@ progress.addEventListener("change",()=>{
     pauseBtn.style.display = "flex";
     playBtn.style.display = "none";
 });
+
+function songProperties() {
+    song.setAttribute('src', `${songs[songCount]}`);
+        song.setAttribute('type', 'video/mp4');
+        songPhoto.style.backgroundImage = `url("${songsPhotos[songCount]}")`;
+        songName.innerText = songsNames[songCount];
+        songArtist.innerText = artistNames[songCount];
+        songName.style.color = colorNames[songCount];
+        pauseBtn.style.display = "flex";
+        playBtn.style.display = "none";
+        song.play();
+}
+
+function songPause() {
+    song.pause();
+    progress.value = 0;
+    song.currentTime = progress.value;
+}
+
+
