@@ -25,18 +25,18 @@
     font-family: 'DS-DIGI';
 }
 .chronometer-btn {
-    width: 70px;
+    width: 40px;
     height: 40px;
     display: flex;
     align-items: center;
     justify-content: center;
     background-color: black; 
     border: 0;
-    margin-right: 40px; 
+    margin: 15px;
 }
 .chronometer-controls {
     display: flex;
-    width: 55px;
+    width: 100px;
     margin-top: 30px;
     align-items: center;
     justify-content: center;
@@ -46,8 +46,12 @@
     width: 40px;
     margin-left: 45px;
     color: rgb(115, 255, 0);
-    padding: 20px;
 }
 .invisible {
     display: none;
+}
+.chronometer-btn img {
+    height: 30px;
+    width: 30px;
+    color: rgb(115, 255, 0);
 }
