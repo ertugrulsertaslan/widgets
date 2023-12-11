@@ -24,14 +24,15 @@ let artistNames = ["Imagine Dragons","The Drums","River Whyless"];
 
 let colorNames = ["#bbff00","#ff3300","#001aff"];
 
-let play = 0;
 let songCount = 0; 
 
 song.onloadedmetadata = function(){
     progress.max = song.duration ;
     progress.value = song.currentTime ;
 }
-
+setInterval(()=>{
+    progress.value = song.currentTime;
+},500)
 
 if(songCount == 0 ){
         song.setAttribute('src', `${songs[songCount]}`);
@@ -43,21 +44,18 @@ if(songCount == 0 ){
         pauseBtn.style.display = "none";
 }
 
-controlIcon.addEventListener("click",()=>{
-    if(play == 0){ 
-        //PlayStopButton.setAttribute('src','photo/pauseBtn.png');
+playBtn.addEventListener("click",()=>{
         pauseBtn.style.display = "flex";
         playBtn.style.display = "none";
         song.play();
-        play--;
-    }else if(play < 0){
-        //PlayStopButton.setAttribute('src','photo/playBtn.png');
-        pauseBtn.style.display="none";
-        playBtn.style.display = "flex";
-        song.pause();
-        play = 0;
-    }
-    
+             
+});
+
+pauseBtn.addEventListener("click",()=>{
+    pauseBtn.style.display="none";
+    playBtn.style.display = "flex";
+    song.pause();
+       
 });
 
 backIcon.addEventListener("click",()=>{
@@ -71,28 +69,23 @@ backIcon.addEventListener("click",()=>{
     if(songCount > 0){
         song.setAttribute('src', `${songs[songCount]}`);
         song.setAttribute('type', 'video/mp4');
-
-       
         songPhoto.style.backgroundImage = `url("${songsPhotos[songCount]}")`;
         songName.innerText = songsNames[songCount];
         songArtist.innerText = artistNames[songCount];
         songName.style.color = colorNames[songCount];
-        song.play();
-        //PlayStopButton.setAttribute('src','photo/pauseBtn.png');
         pauseBtn.style.display = "flex";
         playBtn.style.display = "none";
+        song.play();
     }else{
         song.setAttribute('src', `${songs[songCount]}`);
         song.setAttribute('type', 'video/mp4');
-               
         songPhoto.style.backgroundImage = `url("${songsPhotos[songCount]}")`;
         songName.innerHTML = songsNames[songCount];
         songArtist.innerHTML = artistNames[songCount];
-        songName.style.color = colorNames[songCount];
-        song.play();
-        //PlayStopButton.setAttribute('src','photo/pauseBtn.png');
+        songName.style.color = colorNames[songCount]; 
         pauseBtn.style.display = "flex";
         playBtn.style.display = "none";
+        song.play();
     }
 });
 
@@ -112,7 +105,6 @@ forwardIcon.addEventListener("click",()=>{
                 songArtist.innerHTML = artistNames[songCount];
                 songName.style.color = colorNames[songCount];
                 song.play();
-               // PlayStopButton.setAttribute('src','photo/pauseBtn.png');
                pauseBtn.style.display = "flex";
                playBtn.style.display = "none";
             }
@@ -126,22 +118,16 @@ forwardIcon.addEventListener("click",()=>{
             songArtist.innerHTML = artistNames[songCount];
             songName.style.color = colorNames[songCount];
             song.play();
-            //PlayStopButton.setAttribute('src','photo/pauseBtn.png');
+           
             pauseBtn.style.display = "flex";
             playBtn.style.display = "none";
         }
         
 });
 
-if(play == 0 ){
-        setInterval(()=>{
-        progress.value = song.currentTime;
-    },500)
-}
 progress.addEventListener("change",()=>{
     song.play();
     song.currentTime = progress.value;
-    //PlayStopButton.setAttribute('src','photo/pauseBtn.png');
     pauseBtn.style.display = "flex";
     playBtn.style.display = "none";
 });
