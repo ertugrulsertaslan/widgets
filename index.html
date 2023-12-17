@@ -15,6 +15,7 @@
     <link rel="stylesheet" href="chronometer.css">
     <link rel="stylesheet" href="counter.css">
     <link rel="stylesheet" href="musicplayer.css">
+    <link rel="stylesheet" href="game.css">
 </head>
 <body>
     <div class="container">
@@ -171,9 +172,17 @@
             </div>
         </div>
         <div class="widget-box">
-            <div class="widget"></div>
+            <div class="widget">
+                <div id="game" class="game">
+                    
+                </div>
+            </div>
         </div>
     </div>
+    <!-- External libs -->
+    <script src="https://cdn.jsdelivr.net/npm/phaser@3.70.0/dist/phaser.min.js"></script>
+
+    <!-- Internal libs -->
     <script type="text/javascript" src="piano.js"></script>
     <script type="text/javascript" src="clock.js"></script>
     <script type="text/javascript" src="eyes.js"></script>
@@ -181,5 +190,6 @@
     <script type="text/javascript" src="chronometer.js"></script>
     <script type="text/javascript" src="counter.js"></script>
     <script type="text/javascript" src="musicplayer.js"></script>
+    <script type="text/javascript" src="game.js"></script>
 </body>
 </html>
