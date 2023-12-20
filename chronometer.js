@@ -27,6 +27,7 @@ buttonArr[1].addEventListener("click",() =>{
   
     buttonArr[0].classList.remove("invisible");
     buttonArr[1].classList.add("invisible");
+   
     buttonArr[0].classList.add("left");
     buttonArr[2].classList.add("left");
     
@@ -36,6 +37,7 @@ buttonArr[2].addEventListener("click",() =>{
     reset();
     buttonArr[0].classList.remove("invisible");
     buttonArr[1].classList.add("invisible");
+    buttonArr[2].classList.add("invisible");
 });
 
 
