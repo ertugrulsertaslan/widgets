@@ -9,7 +9,7 @@ body {
   display: flex;
   justify-content: center;
   align-items: center;
-  background-color: #cecece;
+  background-color: rgb(59, 60, 63);
 }
 
 .container {
